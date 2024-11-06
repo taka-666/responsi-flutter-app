@@ -3,7 +3,7 @@
 Berikut adalah tampilan aplikasi nya :
 
 Ini adalah tampilan splash Screen
-(images/splash.png)
+![Tampilan Halaman](images/splash.png)
 Ini adalah tampilan Login screen
 ![Tampilan Halaman](images/login.png)
 Ini adalah tampilan login dengan validator input
