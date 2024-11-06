@@ -18,19 +18,10 @@ class RegisterScreen extends StatelessWidget {
                 children: [
                   Image.asset(
                     'assets/images/logo.png', // Ganti dengan path logo Anda
-                    width: 100,
-                    height: 100,
+                    width: 300,
+                    height: 250,
                   ),
                   const SizedBox(height: 8),
-                  const Text(
-                    'Responsi\n2024',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black,
-                    ),
-                  ),
                 ],
               ),
               const SizedBox(height: 24),
@@ -38,12 +29,24 @@ class RegisterScreen extends StatelessWidget {
               const Text(
                 'Daftar',
                 style: TextStyle(
-                  fontSize: 32,
+                  fontSize: 48,
                   fontWeight: FontWeight.bold,
                   color: Colors.black,
                 ),
               ),
               const SizedBox(height: 24),
+
+              const Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Masukan Email',
+                  style: TextStyle(
+                    fontSize: 14,
+                    color: Colors.black,
+                  ),
+                ),
+              ),
+              const SizedBox(height: 5),
               // Email Field
               TextField(
                 decoration: InputDecoration(
@@ -55,6 +58,18 @@ class RegisterScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 16),
+
+              const Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Masukan Password',
+                  style: TextStyle(
+                    fontSize: 14,
+                    color: Colors.black,
+                  ),
+                ),
+              ),
+              const SizedBox(height: 5),
               // Password Field
               TextField(
                 obscureText: true,
@@ -67,6 +82,18 @@ class RegisterScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 16),
+
+              const Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Masukan Kembali Password',
+                  style: TextStyle(
+                    fontSize: 14,
+                    color: Colors.black,
+                  ),
+                ),
+              ),
+              const SizedBox(height: 5),
               // Confirm Password Field
               TextField(
                 obscureText: true,
@@ -105,6 +132,7 @@ class RegisterScreen extends StatelessWidget {
                 child: ElevatedButton(
                   onPressed: () {
                     // Aksi untuk register
+                    Navigator.pushNamed(context, '/login');
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.blue,
